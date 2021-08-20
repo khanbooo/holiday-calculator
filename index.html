@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello world</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div>
+    <form novalidate>
+        <label for="region">Choose your province.</label>
+        <p><select id="region">
+            <option>Ontario</option>
+            <option>Alberta</option>
+            <option>British Columbia</option>
+            <option>Manitoba</option>
+            <option>New Brunswick</option>
+        </select></p>
+
+
+        <label for="workedOnHoliday">Did you work on the last public holiday?</label>
+        <p><select id="workedOnHoliday">
+            <option>No</option>
+            <option>Yes</option>
+        </select></p>
+
+
+        <label for="holidayHoursWorked" id="labelHHW" hidden="hidden">Hours worked on public holiday</label>
+        <p><input type="number" id="holidayHoursWorked" placeholder="h" hidden="hidden" min="1" max="24"><span id="errorHHW" class="error" aria-live="polite"></span></p>
+
+
+        <label for="hourlySalary" id="labelHS" hidden="hidden">Your hourly salary</label>
+        <p><input type="number" id="hourlySalary" placeholder="$/h" hidden="hidden" max="999999999999" step="any" min="0.00001"><span id="errorHS" class="error" aria-live="polite"></span></p>
+
+
+        <label for="totalSalary" id="labelTS">Your total salary for last 4 weeks</label>
+        <p><input type="number" id="totalSalary" placeholder="$" max="999999999999" step="any" min="0.000010" required="required"><span id="errorTS" class="error" aria-live="polite"></span></p>
+
+
+        <label for="daysWorked" id="labelDW">Days worked last 4 weeks</label>
+        <p><input type="number" id="daysWorked" placeholder="days" min="1" max="28" required="required"><span id="errorDW" class="error" aria-live="polite"></span></p>
+    </form>
+</div>
+    <button id="button">Calculate</button>
+    <p><label for="out">Result</label></p>
+    <input type="text" id="out" disabled="disabled">
+    <script src="app.js"> </script>
+</body>
+</html>
